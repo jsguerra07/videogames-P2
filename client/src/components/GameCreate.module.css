@@ -1,0 +1,61 @@
+.singleButtonContainer {
+    background: black;  
+    color: whitesmoke;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer; 
+    font-size: 1em;
+    padding: 1rem;
+    min-width: 10em;
+    min-height: 2em;
+    position: relative;
+    transition: all 0.4s;
+    
+  }
+  .singleButtonContainer:hover {
+    background: whitesmoke;  
+    color: black;
+  }
+
+  .searchBarInput {
+    border: none;
+    outline: none;
+    border-radius: 0.6rem;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    text-transform: none;
+  }
+
+  .filters {
+    grid-area: filters;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    background-color: grey;
+    border-radius: 0.5em;
+    /* gap: 10px; */
+  }
+
+  .singleFilterContainer {
+    background: black;  
+    color: whitesmoke;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer; 
+    font-size: 1em;
+    padding: 1rem;
+    min-width: 10em;
+    min-height: 2em;
+    position: relative;
+    transition: all 0.4s;
+    
+  }
+  .singleFilterContainer:hover {
+    background: whitesmoke;  
+    color: black;
+  }

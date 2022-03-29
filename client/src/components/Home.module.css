@@ -1,0 +1,195 @@
+.homeContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "title"
+      "search"
+      "filters"
+      "games";
+    width: 100%;
+    padding: 1rem 0.5rem;
+    grid-row-gap: 1rem;
+  }
+  .title {
+    grid-area: title;
+    display: flex;
+    padding: 0rem 1rem;
+  }
+  .search {
+    grid-area: search;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* .header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+  } */
+  
+  .searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    width: 100%;
+    gap: 0.5rem;
+    box-shadow: 0 0.2rem 0.5em 0 rgba(0, 0, 0, 0.2);
+  }
+
+
+  .filters {
+    grid-area: filters;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.5em;
+    /* gap: 10px; */
+  }
+
+  .filters1 {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 13rem;
+    height: 2.5em;
+    padding: 0 4em 0 0.8em;
+    /* background: url("https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg")
+      no-repeat right 1.5em center / 1em; */
+    color: #fff;
+    background-color: grey;
+    border-radius: 2em;
+    box-shadow: 0 0.2rem 0.2em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.2s ease, padding 0.3s ease;
+    font-size: 0.9rem;
+  
+    /* &:focus {
+      outline: none;
+      padding: 0 4em 0 1em;
+    }
+    &::-ms-expand {
+      display: none;
+    } */
+  }
+
+  .filters1:focus {
+    outline: none;
+    padding: 0 4em 0 1em;
+  }
+
+  .filters1::-ms-expand {
+    display: none;
+  }
+
+  .singleFilterContainer {
+    background: black;  
+    color: whitesmoke;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer; 
+    font-size: 1em;
+    padding: 1rem;
+    min-width: 10em;
+    min-height: 2em;
+    position: relative;
+    transition: all 0.4s;
+    
+  }
+  .singleFilterContainer:hover {
+    background: whitesmoke;  
+    color: black;
+  }
+
+
+  .displayGames {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    background-color: grey;
+ */
+    grid-area: games;
+    background-color: grey;
+    border-radius: 1rem;
+    width: 100%;
+    margin: auto;
+
+    /* margin-top: 100px; */
+    /* max-width: 1200px; */
+    /* display: flex; */
+
+    flex-wrap: wrap;
+
+    /* justify-content: center; */
+  }
+
+  .singleButtonContainer {
+    background: black;  
+    color: whitesmoke;
+    border-radius: 0.6rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer; 
+    font-size: 1.5em;
+    padding: 2rem;
+    min-width: 15em;
+    position: relative;
+    transition: all 0.4s;
+    
+  }
+  .singleButtonContainer:hover {
+    background: whitesmoke;  
+    color: black;
+  }
+
+  .img1,
+  .img2,
+  .img3 {
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+  }
+  .img1 {
+    top: -20vh;
+    right: -15vw;
+  }
+  .img2 {
+    top: 70vh;
+    left: -18vw;
+  }
+  /*  
+  }
+  
+  .img3{
+    bottom: -20%;
+    right: -10%;
+  } */
+  
+  @media only screen and (min-width: 768px) {
+    .homeContainer {
+      width: 80vw;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "title search search"
+        "filters filters filters"
+        "games games games";
+      padding: 2rem;
+    }
+    .search {
+      justify-content: flex-end;
+      padding: 0rem 0rem;
+    }
+    .filters {
+      justify-content: flex-start;
+    }
+  }
